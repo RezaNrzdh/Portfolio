@@ -56,8 +56,11 @@ const Handler = async (req, res) => {
                     });
                 }
             }
-            catch(error){
-                res.status(403).json({ success: false, error: error });
+            catch(err){
+                res.status(200).json({
+                    success: false,
+                    error: 'خطایی رخ داده است، دوباره تلاش کنید'
+                });
             }
             break;
     }
