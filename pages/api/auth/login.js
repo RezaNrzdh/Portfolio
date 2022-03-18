@@ -31,8 +31,11 @@ const Handler = async (req, res) => {
 
                 // Check if Email is exist and password is corrent
                 if(getUserLogin !== null && comparePassword) {
-                    
-                    const token = jwt.sign({ id: getUserLogin._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
+                    console.log(getUserLogin);
+                    const token = jwt.sign(
+                        { id: getUserLogin._id, role: getUserLogin.role },
+                        process.env.JWT_SECRET, 
+                        { expiresIn: process.env.JWT_EXPIRES_IN });
                     
                     cookies.set(
                         'jwt',
