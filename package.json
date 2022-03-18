@@ -1,0 +1,36 @@
+{
+  "name": "rezanrzdh",
+  "version": "1.0.0",
+  "description": "My portfolio site is about my ui and ux desgins, 3d and 2d artworks, icons, logos and more on.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/reza.nrzdh/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/reza.nrzdh/portfolio/issues"
+  },
+  "homepage": "https://gitlab.com/reza.nrzdh/portfolio#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "bcrypt": "^5.0.1",
+    "cookies": "^0.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.8",
+    "next": "^12.1.0",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^2.0.2"
+  }
+}

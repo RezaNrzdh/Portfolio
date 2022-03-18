@@ -1,0 +1,66 @@
+import dbConnect from "lib/dbConnect";
+import userModel from "models/userModel";
+import jwt from 'jsonwebtoken';
+import Cookies from 'cookies';
+
+const Handler = async (req, res) => {
+
+    const { method, body } = req;
+    const cookies = new Cookies(req, res);
+
+    // Check if email and password are exist
+    if(!body.email || !body.password) {
+        return res.status(200).json({ 
+            success: false,
+            error: 'لطفا ایمیل و پسورد را وارد کنید'
+        });
+    }
+
+    await dbConnect();
+
+    switch(method){
+        case 'POST':
+            try{                
+                // Check if Email is exist in DB
+                const getUserLogin = await userModel.findOne(
+                    { email: body.email }
+                );
+
+                // Compare current password with currect password in DB
+                const comparePassword = await getUserLogin.comparePassword(body.password, getUserLogin.password);
+
+                // Check if Email is exist and password is corrent
+                if(getUserLogin !== null && comparePassword) {
+                    
+                    const token = jwt.sign({ id: getUserLogin._id }, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN });
+                    
+                    cookies.set(
+                        'jwt',
+                        token,
+                        {
+                            expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRESS_IN * 24 * 60 * 60 * 1000),
+                            httpOnly: true
+                        }
+                    );
+
+                    res.status(200).json({ 
+                        success: true,
+                        token,
+                        data: getUserLogin
+                    });
+                }
+                else {
+                    res.status(200).json({ 
+                        success: false,
+                        error: 'ایمیل یا رمز عبور اشتباه است'
+                    });
+                }
+            }
+            catch(error){
+                res.status(403).json({ success: false, error: error });
+            }
+            break;
+    }
+}
+
+export default Handler;
