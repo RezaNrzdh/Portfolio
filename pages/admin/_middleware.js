@@ -9,9 +9,13 @@ const Middleware = (NextRequest, NextFetchEvent) => {
     }
 
     // Verify token with Signature
-    const verify = jwt.verify(NextRequest.cookies.jwt, process.env.JWT_SECRET);
-
-    return NextResponse.next();
+    try{
+        const verify = jwt.verify(NextRequest.cookies.jwt, process.env.JWT_SECRET);
+        return NextResponse.next();
+    }
+    catch(err){
+        return NextResponse.redirect(process.env.DOMAIN);
+    }
 }
 
 export default Middleware;
