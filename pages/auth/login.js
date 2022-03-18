@@ -8,7 +8,14 @@ const LoginPage = () => {
 
     const [data] = useState({
         submit: 'ورود به سایت',
-        desc: 'با ورود به سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی'
+        desc: 'با ورود به سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی',
+        back: {
+            label: 'هنوز عضو نشدی؟',
+            link: {
+                key: 'همین الان عضو شو',
+                value: '/auth/register'
+            }
+        }
     });
 
     const [alert, setAlert] = useState({

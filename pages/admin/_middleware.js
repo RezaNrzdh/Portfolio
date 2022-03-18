@@ -9,9 +9,22 @@ const Middleware = (NextRequest, NextFetchEvent) => {
     }
 
     // Verify token with Signature
-    const verify = jwt.verify(NextRequest.cookies.jwt, process.env.JWT_SECRET);
-
-    return NextResponse.next();
+    try{
+        const verify = jwt.verify(NextRequest.cookies.jwt, process.env.JWT_SECRET);
+        
+        // Check if user role are Admin or Manager redirect to Admin Panel
+        // if not redirect to Home page
+        if(verify.role == 'admin' || verify.role == 'manager')
+        {
+            return NextResponse.next();
+        }
+        else{
+            return NextResponse.redirect(process.env.DOMAIN);
+        }
+    }
+    catch(err){
+        return NextResponse.redirect(process.env.DOMAIN);
+    }
 }
 
 export default Middleware;

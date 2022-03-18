@@ -17,6 +17,12 @@ const Wrapper = (props) => {
                 <Textbox id='password' name='password' type='password' minlength="4" />
                 <Button basic='primary' type='filled' submit='submit'>{ props.data.submit }</Button>
             </form>
+            <S.BackWrapper>
+                <label>{props.data.back.label}</label>
+                <Link href={props.data.back.link.value}>
+                    <a>{props.data.back.link.key}</a>
+                </Link>
+            </S.BackWrapper>
         </S.Wrapper>
     );
 }

@@ -9,7 +9,14 @@ const RegisterPage = () => {
 
     const [data] = useState({
         submit: 'عضویت در سایت',
-        desc: 'با عضویت در سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی'
+        desc: 'با عضویت در سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی',
+        back: {
+            label: 'قبلا عضو شدی؟',
+            link: {
+                key: 'همین الان لاگین شو',
+                value: '/auth/login'
+            }
+        }
     });
 
     const [alert, setAlert] = useState({
