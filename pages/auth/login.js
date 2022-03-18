@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import AuthLayout from 'components/layouts/authLayout';
+import { Alert } from 'components/index';
 import { Wrapper } from 'views/auth/index';
 
 const LoginPage = () => {

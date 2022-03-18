@@ -16,7 +16,9 @@ const Header = React.memo(() => {
                     <Textbox placeholder='جستجو...' icon='icon-search' />
                 </S.Search>
                 <S.Auth>
-                    <Icon name='icon-user' fill={ Color.icon.main } />
+                    <Link href='/auth/login'>
+                        <a><Icon name='icon-user' fill={ Color.icon.main } /></a>
+                    </Link>
                 </S.Auth>
             </Container>
         </S.HeaderWrapper>
