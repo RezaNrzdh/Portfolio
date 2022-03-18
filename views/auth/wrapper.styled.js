@@ -47,3 +47,18 @@ export const Label = styled.label`
     color: ${ Color.textColor.primary };
     margin-bottom: 8px;
 `;
+
+export const BackWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    font-size: ${Typography.body2.fontSize};
+    font-weight: ${Typography.body2.fontWeight};
+    label{
+        color: ${Color.textColor.primary};
+        margin-left: 4px;
+    }
+    a{
+        color: ${Color.primaryColor.main};
+    }
+`;
