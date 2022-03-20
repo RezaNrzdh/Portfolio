@@ -43,8 +43,8 @@ const RegisterPage = () => {
                     show: true,
                     desc: response.data.desc
                 });
-                const d = setTimeout(() => {
-                    clearTimeout(d);
+                const redirect = setTimeout(() => {
+                    clearTimeout(redirect);
                     Router.push('/');
                 }, 2500);
             }

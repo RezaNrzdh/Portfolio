@@ -1,3 +1,4 @@
+import Router from 'next/router';
 import axios from "axios";
 import { useState } from "react";
 import AuthLayout from 'components/layouts/authLayout';
@@ -42,6 +43,10 @@ const LoginPage = () => {
                     show: true,
                     desc: response.data.desc
                 });
+                const redirect = setTimeout(() => {
+                    clearTimeout(redirect);
+                    Router.push('/');
+                }, 2500);                
             }
             else {
                 setAlert({
