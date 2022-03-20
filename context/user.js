@@ -15,7 +15,7 @@ const UserProvider = (props) => {
         else{
             setUserAuth(false)
         }
-    });
+    },[]);
 
     return(
         <userContext.Provider value={{userAuth, setUserAuth}}>

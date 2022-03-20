@@ -12,6 +12,10 @@ const Header = React.memo(() => {
 
     const {userAuth} = useContext(userContext);
 
+    const AuthButtonClickHandler = () => {
+        window.open('/auth/login','_self');
+    }
+
     return(
         <S.HeaderWrapper>
             <Container>
@@ -26,7 +30,7 @@ const Header = React.memo(() => {
                     {
                         !userAuth
                             ?
-                            <Button basic='primary' type='filled'>ورود / عضویت</Button>
+                            <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
                             :
                             <Link href='/auth/login'>
                                 <a><Icon name='icon-user' fill={ Color.icon.main } /></a>
