@@ -6,7 +6,7 @@ import Cookies from 'cookies';
 const Handler = async (req, res) => {
 
     const { method, body } = req;
-    const cookies = new Cookies(req, res);
+    const cookie = new Cookies(req, res); 
 
     // Check if email and password are exist
     if(!body.email || !body.password) {
@@ -36,15 +36,11 @@ const Handler = async (req, res) => {
                         { id: getUserLogin._id, role: getUserLogin.role },
                         process.env.JWT_SECRET, 
                         { expiresIn: process.env.JWT_EXPIRES_IN });
-                    
-                    cookies.set(
-                        'jwt',
-                        token,
-                        {
-                            expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRESS_IN * 24 * 60 * 60 * 1000),
-                            httpOnly: true
-                        }
-                    );
+
+                    cookie.set('jwt', token, {
+                        expires: new Date(Date.now() + process.env.JWT_COOKIE_EXPIRESS_IN * 24 * 60 * 60 * 1000),
+                        httpOnly: true
+                    });
 
                     res.status(200).json({ 
                         success: true,

@@ -6,8 +6,8 @@ import Container from 'hoc/container';
 import tabs from 'lib/tabs';
 import * as routes from 'lib/routes';
 
-
 const HomePage = ({data}) => {
+
     return(
         <Layout>
             <Head>
