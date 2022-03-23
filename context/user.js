@@ -4,11 +4,13 @@ import axios from "axios";
 export const userContext = createContext();
 
 const UserProvider = (props) => {
-
+    console.log('init context');
     const [userAuth, setUserAuth] = useState(false);
 
     useEffect(async()=> {
+        console.log('start use effect');
         const fetch = await axios.get('/api/utils/cookies');
+        console.log('axios cookie done');
         if(fetch.data){
             setUserAuth(true)
         }

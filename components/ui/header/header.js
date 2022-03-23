@@ -11,6 +11,7 @@ import * as S from './header.styled';
 const Header = React.memo(() => {
 
     const {userAuth} = useContext(userContext);
+    console.log(userAuth);
 
     const AuthButtonClickHandler = () => {
         window.open('/auth/login','_self');
@@ -28,13 +29,13 @@ const Header = React.memo(() => {
                 </S.Search>
                 <S.Auth>
                     {
-                        !userAuth
+                        userAuth
                             ?
-                            <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
-                            :
                             <Link href='/auth/login'>
                                 <a><Icon name='icon-user' fill={ Color.icon.main } /></a>
-                            </Link>
+                            </Link>                            
+                            :
+                            <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
                     }
 
                 </S.Auth>

@@ -1,11 +1,14 @@
 import Router from 'next/router';
 import axios from "axios";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import AuthLayout from 'components/layouts/authLayout';
 import { Alert } from 'components/index';
 import { Wrapper } from 'views/auth/index';
+import { userContext } from 'context/user';
 
 const LoginPage = () => {
+
+    const {userAuth, setUserAuth} = useContext(userContext);
 
     const [data] = useState({
         submit: 'ورود به سایت',
@@ -43,6 +46,7 @@ const LoginPage = () => {
                     show: true,
                     desc: response.data.desc
                 });
+                setUserAuth(true);
                 const redirect = setTimeout(() => {
                     clearTimeout(redirect);
                     Router.push('/');
