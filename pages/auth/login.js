@@ -31,7 +31,7 @@ const LoginPage = () => {
     const onHandlerSubmitButton = async(event) => {
         event.preventDefault();
 
-        // Hide alert box after every click the Submit button
+        // Hide alert box after every click on the Submit button
         alert.show ? setAlert({...alert, show: false}) : null;
 
         try{
