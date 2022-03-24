@@ -46,7 +46,10 @@ const LoginPage = () => {
                     show: true,
                     desc: response.data.desc
                 });
+
+                //change UserContext Api after login
                 setUserAuth(true);
+                
                 const redirect = setTimeout(() => {
                     clearTimeout(redirect);
                     Router.push('/');
