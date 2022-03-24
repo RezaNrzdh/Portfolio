@@ -11,7 +11,6 @@ import * as S from './header.styled';
 const Header = React.memo(() => {
 
     const {userAuth} = useContext(userContext);
-    console.log(userAuth);
 
     const AuthButtonClickHandler = () => {
         window.open('/auth/login','_self');

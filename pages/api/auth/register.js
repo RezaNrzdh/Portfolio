@@ -5,6 +5,9 @@ const Handler = async (req, res) => {
     
     const { method, body } = req;
 
+    // Set Headers
+    res.setHeader("Access-Control-Allow-Origin", process.env.DOMAIN);
+
     // Check if email and password are exist
     if( !body.email || !body.password){
         return res.status(200).json({ 
@@ -33,6 +36,7 @@ const Handler = async (req, res) => {
             }
 
             break;
+            
     }
 }
 
