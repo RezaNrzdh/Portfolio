@@ -1,15 +1,19 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Router from 'next/router'
 import axios from 'axios';
 import AuthLayout from 'components/layouts/authLayout';
 import { Alert } from 'components/index';
 import { Wrapper } from 'views/auth/index';
+import { userContext } from 'context/user';
 
 const RegisterPage = () => {
+
+    const {userAuth, setUserAuth} = useContext(userContext);
 
     const [data] = useState({
         submit: 'عضویت در سایت',
         desc: 'با عضویت در سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی',
+        btn: 'primary',
         back: {
             label: 'قبلا عضو شدی؟',
             link: {
@@ -43,6 +47,10 @@ const RegisterPage = () => {
                     show: true,
                     desc: response.data.desc
                 });
+
+                //change UserContext Api after login
+                setUserAuth(true);
+
                 const redirect = setTimeout(() => {
                     clearTimeout(redirect);
                     Router.push('/');

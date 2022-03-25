@@ -13,6 +13,7 @@ const LoginPage = () => {
     const [data] = useState({
         submit: 'ورود به سایت',
         desc: 'با ورود به سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی',
+        btn: 'secondary',
         back: {
             label: 'هنوز عضو نشدی؟',
             link: {

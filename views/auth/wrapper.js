@@ -15,7 +15,7 @@ const Wrapper = (props) => {
                 <Textbox id='email' name='email' type='email' />
                 <S.Label htmlFor='email'>رمز عبور</S.Label>
                 <Textbox id='password' name='password' type='password' minlength="4" />
-                <Button basic='primary' type='filled' submit='submit'>{ props.data.submit }</Button>
+                <Button basic={props.data.btn} type='filled' submit='submit'>{ props.data.submit }</Button>
             </form>
             <S.BackWrapper>
                 <label>{props.data.back.label}</label>

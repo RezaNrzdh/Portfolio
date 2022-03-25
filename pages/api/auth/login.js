@@ -6,7 +6,10 @@ import Cookies from 'cookies';
 const Handler = async (req, res) => {
 
     const { method, body } = req;
-    const cookie = new Cookies(req, res); 
+    const cookie = new Cookies(req, res);
+
+    // Set Headers
+    res.setHeader("Access-Control-Allow-Origin", process.env.DOMAIN);
 
     // Check if email and password are exist
     if(!body.email || !body.password) {
@@ -31,7 +34,6 @@ const Handler = async (req, res) => {
 
                 // Check if Email is exist and password is corrent
                 if(getUserLogin !== null && comparePassword) {
-                    console.log(getUserLogin);
                     const token = jwt.sign(
                         { id: getUserLogin._id, role: getUserLogin.role },
                         process.env.JWT_SECRET, 
