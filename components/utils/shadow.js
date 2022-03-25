@@ -5,4 +5,8 @@ const Shadow = {
     xLarge: '0 12px 24px rgba(0,0,0,0.04)'
 }
 
-export { Shadow };
+const ShadowCustom = (x='0', y='3', blur='6', opacity='4') => {
+    return x + 'px ' + y + 'px ' + blur + 'px ' + 'rgba(0,0,0,' + (opacity/100) + ')';
+}
+
+export { Shadow, ShadowCustom };

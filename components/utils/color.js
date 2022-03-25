@@ -4,7 +4,8 @@ const Color = {
         hover: '#E24445'
     },
     secondaryColor: {
-        main: '#89A4C7' //027A97
+        main: '#89A4C7', //027A97
+        hover: '#D1EBFE'
     },
     darkColor: {
         main: '#303644',

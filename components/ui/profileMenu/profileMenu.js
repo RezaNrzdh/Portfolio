@@ -10,7 +10,7 @@ const ProfileMenu = () => {
                 <S.list>
                     <Link href=''>
                         <a>
-                            <Icon icon='icon-user' />
+                            <Icon icon='icon-profile' size='24' color={Color.icon.main} />
                             <label>پروفایل</label>
                         </a>
                     </Link>
@@ -18,7 +18,7 @@ const ProfileMenu = () => {
                 <S.list>
                     <Link href=''>
                         <a>
-                            <Icon icon='icon-user' color={ Color.icon.main } />
+                            <Icon icon='icon-dashboard' size='24' color={ Color.icon.main } />
                             <label>داشبورد</label>
                         </a>
                     </Link>                            
@@ -26,7 +26,7 @@ const ProfileMenu = () => {
                 <S.list>
                     <Link href=''>
                         <a>
-                            <Icon icon='icon-user' color={ Color.icon.main } />
+                            <Icon icon='icon-logout' size='24' color={ Color.icon.main } />
                             <label>خروج</label>
                         </a>
                     </Link>

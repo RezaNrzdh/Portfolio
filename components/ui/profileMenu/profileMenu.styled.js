@@ -1,4 +1,4 @@
-import {Color, Shadow, Radius} from 'components/index';
+import {Color, Shadow, Radius, Typography, ShadowCustom} from 'components/index';
 import styled from 'styled-components';
 
 export const ProfileMenu = styled.div`
@@ -6,12 +6,11 @@ export const ProfileMenu = styled.div`
     position: absolute;
     top:48px;
     left:0;
-    width: 150px;
-    padding: 24px;
-    border: 1px solid ${ Color.strokeColor.main };
+    width: 180px;
+    overflow: hidden;
     background-color: ${ Color.surfaceColor.light };
     border-radius: ${ Radius.medium };
-    box-shadow: ${ Shadow.xLarge };
+    box-shadow: ${ ShadowCustom(0,3,12,16) };
 `;
 
 export const UnorderedList = styled.ul`
@@ -19,7 +18,7 @@ export const UnorderedList = styled.ul`
     flex-direction: column;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 16px 0;
 `;
 
 export const list = styled.li`
@@ -28,10 +27,22 @@ export const list = styled.li`
     list-style: none;
     width: 100%;
     height: 40px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: background-color ease-in-out 0.2s;
     a{
         display: flex;
+        width: 100%;
         label{
             margin-right: 16px;
+            color: ${ Color.textColor.primary };
+            font-size: ${ Typography.body2.fontSize };
+            font-weight: ${ Typography.body2.fontWeight };
+            cursor: pointer;
         }
+    }
+    &:hover{
+        background-color: ${ Color.secondaryColor.hover };
     }
 `;
