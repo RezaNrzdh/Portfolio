@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Icon } from '../..';
+import Icon from 'components/utils/icon';
 import * as S from './card.styled';
 import DateConverter from '../../../lib/dateConverter'
 
@@ -24,11 +24,11 @@ const Card = ({slug, src, title, author, createAt}) => {
                     <S.CardDetail>
                         <div>
                             <S.Author>
-                                <Icon name='icon-user' />
+                                <Icon icon='icon-user' size='24' />
                                 <S.Span>{ author }</S.Span>
                             </S.Author>
                             <S.Create>
-                                <Icon name='icon-calendar' />
+                                <Icon icon='icon-calendar' size='24' />
                                 <S.Span>{ locale }</S.Span>
                             </S.Create>
                         </div>

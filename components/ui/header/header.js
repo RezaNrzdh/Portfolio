@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
+import Icon from 'components/utils/icon';
 import Link from 'next/link';
-
 import Container from 'hoc/container';
-import { Icon, Nav, Color, Textbox, Button } from 'components/index';
+import { Nav, Color, Textbox, Button, ProfileMenu } from 'components/index';
 import { userContext } from 'context/user';
-
 import * as S from './header.styled';
 
 
@@ -20,7 +19,7 @@ const Header = React.memo(() => {
         <S.HeaderWrapper>
             <Container>
                 <Link href='/'>
-                    <a><Icon name='icon-logo' width='117' height='32' viewBox='0 0 117 32' fill={ Color.primaryColor.main } /></a>
+                    <a><img src='/icons/Logo.svg' /></a>
                 </Link>
                 <Nav />
                 <S.Search>
@@ -30,9 +29,12 @@ const Header = React.memo(() => {
                     {
                         userAuth
                             ?
-                            <Link href='/auth/login'>
-                                <a><Icon name='icon-user' fill={ Color.icon.main } /></a>
-                            </Link>                            
+                            <>
+                                <Link href='/auth/login'>
+                                    <a className='profileMenu'><Icon icon='icon-user' size='24' color={ Color.textColor.contrast } /></a>
+                                </Link>
+                                <ProfileMenu />
+                            </>                         
                             :
                             <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
                     }

@@ -1,4 +1,4 @@
-import { Icon } from 'components';
+import Icon from 'components/utils/icon';
 import * as S from './title.styled';
 import DateConverter from 'lib/dateConverter'; 
 import { useEffect, useState } from 'react';
@@ -16,11 +16,11 @@ const Title = ({title, author, createAt}) => {
             <S.Headline>{ title }</S.Headline>
             <S.Details>
                 <S.Author>
-                    <Icon name='icon-user' />
+                    <Icon icon='icon-user' />
                     <span>{ author }</span>
                 </S.Author>
                 <S.create>
-                    <Icon name='icon-calendar' />
+                    <Icon icon='icon-calendar' />
                     <span>{ locale }</span>
                 </S.create>
             </S.Details>

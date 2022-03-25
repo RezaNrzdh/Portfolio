@@ -1,4 +1,5 @@
-import { Icon, Color, Textbox, Button } from 'components/index';
+import Icon from 'components/utils/icon';
+import { Color, Textbox, Button } from 'components/index';
 import * as S from './wrapper.styled';
 import Link from 'next/link';
 
@@ -7,7 +8,7 @@ const Wrapper = (props) => {
         <S.Wrapper>
             <S.Welcome>خوش اومدی به</S.Welcome>
             <Link href='/'>
-                <a><Icon name='icon-logo' width='117' height='32' viewBox='0 0 117 32' fill={ Color.primaryColor.main } /></a>
+                <a><img src='/icons/Logo.svg' /></a>
             </Link>
             <S.Desc>{ props.data.desc }</S.Desc>
             <form onSubmit={props.click}>

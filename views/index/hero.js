@@ -1,5 +1,6 @@
+import Icon from 'components/utils/icon';
 import * as S from './hero.styled';
-import { Button, Icon } from 'components';
+import { Button } from 'components';
 import { useState } from 'react';
 import Container from 'hoc/container';
 

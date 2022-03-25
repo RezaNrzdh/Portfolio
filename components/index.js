@@ -1,7 +1,6 @@
 // Utils
 export * from './utils/typography';
 export * from './utils/color';
-export * from './utils/icon';
 export * from './utils/shadow';
 export * from './utils/radius';
 
@@ -14,6 +13,7 @@ export * from './ui/button/button';
 export * from './ui/card/card';
 export * from './ui/tooltip/tooltip';
 export * from './ui/alert/alert';
+export * from './ui/profileMenu/profileMenu';
 
 //Admin Components
 export * from './ui/header/adminHeader';

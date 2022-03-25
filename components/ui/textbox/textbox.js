@@ -1,4 +1,5 @@
-import { Color, Icon } from '../../index';
+import Icon from 'components/utils/icon';
+import { Color } from '../../index';
 import * as S from './textbox.style';
 
 const Textbox = ({placeholder, icon, type, id, name, minlength}) => {
@@ -15,7 +16,7 @@ const Textbox = ({placeholder, icon, type, id, name, minlength}) => {
             {
                 icon ?
                 <S.Anchor>
-                    <Icon name={ icon } fill={ Color.icon.main } />
+                    <Icon icon={ icon } size={24} color={ Color.icon.main } />
                 </S.Anchor>
                 : null 
             }

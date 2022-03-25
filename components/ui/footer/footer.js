@@ -1,6 +1,7 @@
 import * as S from './footer.styled';
 import Container from '../../../hoc/container';
-import { Color, Icon } from '../..';
+import {Color} from 'components/index';
+import Icon from 'components/utils/icon';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -8,7 +9,7 @@ const Footer = () => {
         <S.FooterWrapper>
             <Container column>
                 <S.LogoWrapper>
-                    <Icon name='icon-logo' width='117' height='32' viewBox='0 0 117 32' fill={ Color.primaryColor.main } />
+                    <img src='/icons/Logo.svg' />
                 </S.LogoWrapper>
                 <S.Description>
                     رضا نوروززاده هستم، طراح محصول و توسعه دهنده فرانت.
@@ -18,22 +19,22 @@ const Footer = () => {
                 <S.SocialMediaWrapper>
                     <Link href=''>
                         <S.Anchor href='https://www.instagram.com/rezanrzdh/' target='_blank' ref='noreferrer'>
-                            <Icon name='icon-instagram' />
+                            <Icon icon='icon-instagram' />
                         </S.Anchor>
                     </Link>
                     <Link href=''>
                         <S.Anchor>
-                            <Icon name='icon-dribbble' />
+                            <Icon icon='icon-dribbble' />
                         </S.Anchor>
                     </Link>
                     <Link href=''>
                         <S.Anchor>
-                            <Icon name='icon-googledrive' />
+                            <Icon icon='icon-googledrive' />
                         </S.Anchor>
                     </Link>
                     <Link href=''>
                         <S.Anchor>
-                            <Icon name='icon-linkedin' />
+                            <Icon icon='icon-linkedin' />
                         </S.Anchor>
                     </Link>
                 </S.SocialMediaWrapper>

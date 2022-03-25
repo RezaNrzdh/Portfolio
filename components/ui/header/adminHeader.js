@@ -1,8 +1,10 @@
+import * as S from './adminHeader.styled';
+
 const AdminHeader = () => {
     return(
-        <div>
+        <S.Header>
             <h1>ADMIN HEADER</h1>
-        </div>
+        </S.Header>
     );
 }
 

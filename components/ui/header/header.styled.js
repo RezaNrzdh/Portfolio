@@ -1,4 +1,4 @@
-import { Shadow, Color } from '../../../components';
+import { Shadow, Color, Radius } from '../../../components';
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
@@ -13,9 +13,19 @@ export const HeaderWrapper = styled.header`
 
 export const Auth = styled.div`
     display: flex;
+    position: relative;
     align-items: center;
-    margin-right: 24px;
-    height: inherit;
+    margin-right: 16px;
+    height: 40px;
+    .profileMenu{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        border-radius: ${ Radius.small };
+        background-color: ${ Color.primaryColor.main };
+    }
 `;
 
 export const Search = styled.div`

@@ -1,4 +1,5 @@
-import { Button, Icon } from 'components';
+import Icon from 'components/utils/icon';
+import { Button } from 'components';
 import * as S from './media.styled';
 
 const Media = (props) => {
@@ -6,15 +7,15 @@ const Media = (props) => {
         <S.MediaWrapper>
             <S.HeroWrapper>
                 <Button basic='light' iconOnly>
-                    <Icon name='icon-download' />
+                    <Icon icon='icon-download' />
                 </Button>
                 <S.Hero src={ props.images[props.selected].src } />
                 <S.NavigationWrapper>
                     <Button click={() => {props.prevBtn()}} basic='dark' type='outlined' iconOnly>
-                        <Icon name='icon-chevronright' />
+                        <Icon icon='icon-chevronright' />
                     </Button>
                     <Button click={() => {props.nextBtn()}} basic='dark' type='outlined' iconOnly>
-                        <Icon name='icon-chevronleft' />
+                        <Icon icon='icon-chevronleft' />
                     </Button>
                 </S.NavigationWrapper>
             </S.HeroWrapper>
