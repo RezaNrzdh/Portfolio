@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Icon from 'components/utils/icon';
 import Link from 'next/link';
 import Container from 'hoc/container';
@@ -11,8 +11,14 @@ const Header = React.memo(() => {
 
     const {userAuth} = useContext(userContext);
 
+    const [profileMenu, setpProfileMenu] = useState(false);
+
     const AuthButtonClickHandler = () => {
         window.open('/auth/login','_self');
+    }
+
+    const ProfileMenuClickHandler = () => {
+        setpProfileMenu(!profileMenu);
     }
 
     return(
@@ -30,10 +36,10 @@ const Header = React.memo(() => {
                         userAuth
                             ?
                             <>
-                                <Link href='/auth/login'>
-                                    <a className='profileMenu'><Icon icon='icon-user' size='24' color={ Color.textColor.contrast } /></a>
-                                </Link>
-                                <ProfileMenu />
+                                <Button basic='primary' type='filled' click={ProfileMenuClickHandler}>
+                                    <Icon icon='icon-user' size='24' />
+                                </Button>
+                                <ProfileMenu show={profileMenu} />
                             </>                         
                             :
                             <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>

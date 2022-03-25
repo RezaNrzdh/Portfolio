@@ -3,9 +3,9 @@ import { Color } from 'components/utils/color';
 import Icon from 'components/utils/icon';
 import * as S from './profileMenu.styled';
 
-const ProfileMenu = () => {
+const ProfileMenu = ({show}) => {
     return(
-        <S.ProfileMenu>
+        <S.ProfileMenu show={show}>
             <S.UnorderedList>
                 <S.list>
                     <Link href=''>

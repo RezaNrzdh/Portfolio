@@ -2,7 +2,7 @@ import {Color, Shadow, Radius, Typography, ShadowCustom} from 'components/index'
 import styled from 'styled-components';
 
 export const ProfileMenu = styled.div`
-    display: flex;
+    display: ${ props => props.show ? 'flex' : 'none' };
     position: absolute;
     top:48px;
     left:0;
