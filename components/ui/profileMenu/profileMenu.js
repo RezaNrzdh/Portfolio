@@ -1,11 +1,15 @@
+import { useRef } from 'react';
 import Link from 'next/link';
 import { Color } from 'components/utils/color';
 import Icon from 'components/utils/icon';
 import * as S from './profileMenu.styled';
 
 const ProfileMenu = ({show}) => {
+
+    const menuRef = useRef();
+
     return(
-        <S.ProfileMenu show={show}>
+        <S.ProfileMenu show={show} ref={menuRef}>
             <S.UnorderedList>
                 <S.list>
                     <Link href=''>
