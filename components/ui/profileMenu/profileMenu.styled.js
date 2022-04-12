@@ -31,7 +31,13 @@ export const list = styled.li`
     box-sizing: border-box;
     cursor: pointer;
     transition: background-color ease-in-out 0.2s;
-    a{
+    button{
+        border: none;
+        background-color: transparent;
+        font-family: PelakFont;
+        padding: 0;
+    }
+    a, button{
         display: flex;
         width: 100%;
         label{
