@@ -9,7 +9,7 @@ import * as S from './header.styled';
 
 const Header = React.memo(() => {
 
-    const {userAuth} = useContext(userContext);
+    const {userAuth, setUserAuth} = useContext(userContext);
 
     // useState for SHOW & HIDE profile menu
     const [profileMenu, setpProfileMenu] = useState(false);
@@ -42,7 +42,11 @@ const Header = React.memo(() => {
                                 <Button basic='primary' type='filled' click={ProfileMenuClickHandler}>
                                     <Icon icon='icon-user' size='24' />
                                 </Button>
-                                <ProfileMenu show={profileMenu} profileMenu={profileMenu} setpProfileMenu={setpProfileMenu}/>
+                                <ProfileMenu 
+                                    show={profileMenu} 
+                                    profileMenu={profileMenu} 
+                                    setpProfileMenu={setpProfileMenu}
+                                    setUserAuth={setUserAuth}/>
                             </>                         
                             :
                             <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>

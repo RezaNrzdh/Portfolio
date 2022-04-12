@@ -1,8 +1,10 @@
 import { useRef, useEffect } from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
 import { Color } from 'components/utils/color';
 import Icon from 'components/utils/icon';
 import * as S from './profileMenu.styled';
+import axios from 'axios';
 
 const ProfileMenu = (props) => {
 
@@ -21,6 +23,12 @@ const ProfileMenu = (props) => {
         if(menuRef.current && !menuRef.current.contains(event.target)){
             props.setpProfileMenu(false);
         }
+    }
+
+    const LogoutHandler = async () => {
+        await axios.get('/api/auth/logout');
+        props.setUserAuth(false);
+        Router.push('/');
     }
 
     return(
@@ -43,12 +51,10 @@ const ProfileMenu = (props) => {
                     </Link>                            
                 </S.list>
                 <S.list>
-                    <Link href=''>
-                        <a>
-                            <Icon icon='icon-logout' size='24' color={ Color.icon.main } />
-                            <label>خروج</label>
-                        </a>
-                    </Link>
+                    <button onClick={LogoutHandler}>
+                        <Icon icon='icon-logout' size='24' color={ Color.icon.main } />
+                        <label>خروج</label>
+                    </button>
                 </S.list>
             </S.UnorderedList>
         </S.ProfileMenu>
