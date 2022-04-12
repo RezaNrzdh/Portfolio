@@ -1,10 +1,12 @@
-import React, { useEffect, useContext, useState, useRef } from 'react';
-import Icon from 'components/utils/icon';
+import React, { useContext, useState } from 'react';
 import Link from 'next/link';
+import Router from 'next/router';
+import Icon from 'components/utils/icon';
 import Container from 'hoc/container';
-import { Nav, Color, Textbox, Button, ProfileMenu } from 'components/index';
+import { Nav, Textbox, Button, ProfileMenu } from 'components/index';
 import { userContext } from 'context/user';
 import * as S from './header.styled';
+import axios from 'axios';
 
 
 const Header = React.memo(() => {
@@ -23,6 +25,13 @@ const Header = React.memo(() => {
     const ProfileMenuClickHandler = () => {
         setpProfileMenu(!profileMenu);
     }
+
+    const LogoutHandler = async () => {
+        await axios.get('/api/auth/logout');
+        setUserAuth(false);
+        Router.push('/');
+    }
+
 
     return(
         <S.HeaderWrapper>
@@ -46,7 +55,7 @@ const Header = React.memo(() => {
                                     show={profileMenu} 
                                     profileMenu={profileMenu} 
                                     setpProfileMenu={setpProfileMenu}
-                                    setUserAuth={setUserAuth}/>
+                                    click={LogoutHandler}/>
                             </>                         
                             :
                             <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
