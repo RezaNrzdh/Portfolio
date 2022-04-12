@@ -48,7 +48,7 @@ const Header = React.memo(() => {
                         userAuth
                             ?
                             <>
-                                <Button basic='primary' type='filled' click={ProfileMenuClickHandler}>
+                                <Button basic='primary' type='filled' iconOnly click={ProfileMenuClickHandler}>
                                     <Icon icon='icon-user' size='24' />
                                 </Button>
                                 <ProfileMenu 

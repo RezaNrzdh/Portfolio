@@ -9,6 +9,7 @@ const Color = {
     },
     darkColor: {
         main: '#303644',
+        variant: '#394153',
         hover: '#444444'
     },
     backgroundColor: '#F5F5FB',

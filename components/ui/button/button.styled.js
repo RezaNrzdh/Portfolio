@@ -7,12 +7,17 @@ const Button = styled.button`
     align-items: center;
     height: 40px;
     border-radius: 8px;
-    padding-left: ${ props => props.iconOnly ? null : '16px' };
-    padding-right:${ props => props.iconOnly ? null : '16px' };
+    max-width: ${ props => props.iconOnly ? '40px' : null };
+    padding-left: ${ props => props.iconOnly ? '8px' : '16px' };
+    padding-right:${ props => props.iconOnly ? '8px' : '16px' };
     transition: background-color ease-in-out 0.3s;
     font-family: PelakFont;
     font-size: ${ Typography.body2.fontSize };
     font-weight: ${ Typography.body2.fontWeight };
+    svg{
+        width: 24px;
+        height: 24px;
+    }
 `;
 
 export const PrimaryOutlined = styled(Button)`

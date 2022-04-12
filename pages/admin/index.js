@@ -1,9 +1,10 @@
 import AdminLayout from 'components/layouts/adminLayout';
+import {Wrapper} from 'views/admin/index';
 
 const AdminDashboard = () => {
     return(
         <AdminLayout>
-            <p>Dashboard Body</p>
+            <Wrapper />
         </AdminLayout>
     );
 }
