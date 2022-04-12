@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from 'react';
+import React, { useEffect, useContext, useState, useRef } from 'react';
 import Icon from 'components/utils/icon';
 import Link from 'next/link';
 import Container from 'hoc/container';
@@ -23,22 +23,6 @@ const Header = React.memo(() => {
     const ProfileMenuClickHandler = () => {
         setpProfileMenu(!profileMenu);
     }
-    console.log(1);
-    // Click Handler if user Click outside of Profile Menu
-    useEffect(() => {
-        console.log(profileMenu);
-        // document.addEventListener('mousedown', OutsideClickHandler);
-        // return(() => {
-        //     document.addEventListener('mousedown', OutsideClickHandler);
-        // });
-    },[profileMenu]);
-
-    const OutsideClickHandler = (event) => {
-        console.log(2);
-        // if(menuRef.current && !menuRef.current.contains(event.target)){
-        //     console.log('Outside Clicked!');
-        // }
-    }
 
     return(
         <S.HeaderWrapper>
@@ -58,7 +42,7 @@ const Header = React.memo(() => {
                                 <Button basic='primary' type='filled' click={ProfileMenuClickHandler}>
                                     <Icon icon='icon-user' size='24' />
                                 </Button>
-                                <ProfileMenu show={profileMenu}/>
+                                <ProfileMenu show={profileMenu} profileMenu={profileMenu} setpProfileMenu={setpProfileMenu}/>
                             </>                         
                             :
                             <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
