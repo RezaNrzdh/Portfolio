@@ -49,7 +49,10 @@ const LoginPage = () => {
                 });
 
                 //change UserContext Api after login
-                setUserAuth(true);
+                setUserAuth({
+                    ...userAuth,
+                    login: true
+                });
                 
                 const redirect = setTimeout(() => {
                     clearTimeout(redirect);

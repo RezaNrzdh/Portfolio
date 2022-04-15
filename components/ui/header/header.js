@@ -45,7 +45,7 @@ const Header = React.memo(() => {
                 </S.Search>
                 <S.Auth>
                     {
-                        userAuth
+                        userAuth.login
                             ?
                             <>
                                 <Button basic='primary' type='filled' iconOnly click={ProfileMenuClickHandler}>

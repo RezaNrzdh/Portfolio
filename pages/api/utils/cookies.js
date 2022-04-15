@@ -1,14 +1,16 @@
 import Cookies from 'cookies';
+import jwt from 'jsonwebtoken';
 
 const Handler = async(req, res) => { 
     const cookie = new Cookies(req,res);
-    const jwt = cookie.get('jwt');
+    const jwtCookie = cookie.get('jwt');
 
-    if(jwt)
-    {
-        res.status(200).json(jwt);
+    // Verify token with Signature
+    try{
+        const verify = jwt.verify(jwtCookie, process.env.JWT_SECRET);
+        res.status(200).json(verify);
     }
-    else{
+    catch(error){
         res.status(200).json(false);
     }
 }

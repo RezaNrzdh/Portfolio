@@ -5,17 +5,28 @@ export const userContext = createContext();
 
 const UserProvider = (props) => {
 
-    const [userAuth, setUserAuth] = useState(false);
+    const [userAuth, setUserAuth] = useState({
+        login: false,
+        id: null,
+        role: null
+    });
 
     useEffect(async()=> {
 
         const fetch = await axios.get('/api/utils/cookies');
-
+        console.log(fetch.data);
         if(fetch.data){
-            setUserAuth(true)
+            setUserAuth({
+                login: true,
+                id: fetch.data.id,
+                role: fetch.data.role
+            })
         }
         else{
-            setUserAuth(false)
+            setUserAuth({
+                ...userAuth,
+                login: false
+            })
         }
     },[]);
 
