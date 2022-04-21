@@ -14,12 +14,12 @@ const UserProvider = (props) => {
     useEffect(async()=> {
 
         const fetch = await axios.get('/api/utils/cookies');
-        console.log(fetch.data);
+
         if(fetch.data){
             setUserAuth({
                 login: true,
                 id: fetch.data.id,
-                role: fetch.data.role
+                role: fetch.data.role   
             })
         }
         else{

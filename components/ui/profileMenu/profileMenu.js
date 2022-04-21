@@ -8,7 +8,7 @@ import * as S from './profileMenu.styled';
 const ProfileMenu = (props) => {
 
     const menuRef = useRef();
-
+    console.log(props.role);
     useEffect(() => {
         if(props.profileMenu){
             document.addEventListener('click', OutsideClickHandler);
@@ -35,14 +35,20 @@ const ProfileMenu = (props) => {
                         </a>
                     </Link>
                 </S.list>
-                <S.list>
-                    <Link href=''>
-                        <a>
-                            <Icon icon='icon-dashboard' size='24' color={ Color.icon.main } />
-                            <label>داشبورد</label>
-                        </a>
-                    </Link>                            
-                </S.list>
+                {
+                    props.role == 'admin' && props.role == 'manager' ?
+                    <>
+                        <S.list>
+                            <Link href=''>
+                                <a>
+                                    <Icon icon='icon-dashboard' size='24' color={ Color.icon.main } />
+                                    <label>داشبورد</label>
+                                </a>
+                            </Link>                            
+                        </S.list>                    
+                    </>
+                    : null
+                }
                 <S.list>
                     <button onClick={props.click}>
                         <Icon icon='icon-logout' size='24' color={ Color.icon.main } />

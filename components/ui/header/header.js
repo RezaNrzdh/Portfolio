@@ -28,7 +28,10 @@ const Header = React.memo(() => {
 
     const LogoutHandler = async () => {
         await axios.get('/api/auth/logout');
-        setUserAuth(false);
+        setUserAuth({
+            ...userAuth,
+            login: false
+        })
         Router.push('/');
     }
 
@@ -51,7 +54,8 @@ const Header = React.memo(() => {
                                 <Button basic='primary' type='filled' iconOnly click={ProfileMenuClickHandler}>
                                     <Icon icon='icon-user' size='24' />
                                 </Button>
-                                <ProfileMenu 
+                                <ProfileMenu
+                                    role={userAuth.role}
                                     show={profileMenu} 
                                     profileMenu={profileMenu} 
                                     setpProfileMenu={setpProfileMenu}
