@@ -6,17 +6,17 @@ const Nav = () => {
         <S.UnorderedList>
             <S.List>
                 <Link href='#'>
-                    <S.Anchor>نمونه کارهای من</S.Anchor>
+                    <S.Anchor>Portfolio</S.Anchor>
                 </Link>
             </S.List>
             <S.List>
                 <Link href='/about'>
-                    <S.Anchor>درباره من</S.Anchor>
+                    <S.Anchor>About</S.Anchor>
                 </Link>
             </S.List>
             <S.List>
                 <Link href='#'>
-                    <S.Anchor>تماس با من</S.Anchor>
+                    <S.Anchor>Contact</S.Anchor>
                 </Link>
             </S.List>
         </S.UnorderedList>

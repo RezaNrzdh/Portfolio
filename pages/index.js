@@ -11,7 +11,7 @@ const HomePage = ({data}) => {
     return(
         <Layout>
             <Head>
-                <title>رضا نوروز زاده | طراح محصول و توسعه دهنده وب</title>
+                <title>Reza Norouzzadeh | UX Designer and Frontend Developer</title>
             </Head>
             <Hero />
             <Container column>

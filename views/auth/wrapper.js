@@ -6,15 +6,15 @@ import Link from 'next/link';
 const Wrapper = (props) => {
     return(
         <S.Wrapper>
-            <S.Welcome>خوش اومدی به</S.Welcome>
+            <S.Welcome>Welcome to</S.Welcome>
             <Link href='/'>
                 <a><img src='/icons/Logo.svg' /></a>
             </Link>
             <S.Desc>{ props.data.desc }</S.Desc>
             <form onSubmit={props.click}>
-                <S.Label htmlFor='email'>نام کاربری / ایمیل</S.Label>
+                <S.Label htmlFor='email'>Enter Email or Username</S.Label>
                 <Textbox id='email' name='email' type='email' />
-                <S.Label htmlFor='email'>رمز عبور</S.Label>
+                <S.Label htmlFor='email'>Enter Password</S.Label>
                 <Textbox id='password' name='password' type='password' minlength="4" />
                 <Button basic={props.data.btn} type='filled' submit='submit'>{ props.data.submit }</Button>
             </form>

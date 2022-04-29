@@ -15,7 +15,7 @@ export const Auth = styled.div`
     display: flex;
     position: relative;
     align-items: center;
-    margin-right: 16px;
+    margin-left: 16px;
     height: 40px;
     .profileMenu{
         display: flex;
@@ -31,6 +31,6 @@ export const Auth = styled.div`
 export const Search = styled.div`
     display: flex;
     align-items: center;
-    margin-right: auto;
+    margin-left: auto;
     height: inherit;
 `;

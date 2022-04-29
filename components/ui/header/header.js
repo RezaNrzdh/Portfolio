@@ -44,7 +44,7 @@ const Header = React.memo(() => {
                 </Link>
                 <Nav />
                 <S.Search>
-                    <Textbox placeholder='جستجو...' icon='icon-search' />
+                    <Textbox placeholder='Search...' icon='icon-search' />
                 </S.Search>
                 <S.Auth>
                     {
@@ -62,7 +62,7 @@ const Header = React.memo(() => {
                                     click={LogoutHandler}/>
                             </>                         
                             :
-                            <Button basic='primary' type='filled' click={AuthButtonClickHandler}>ورود / عضویت</Button>
+                            <Button basic='primary' type='filled' click={AuthButtonClickHandler}>SIGN IN</Button>
                     }
 
                 </S.Auth>

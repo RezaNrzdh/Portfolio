@@ -31,7 +31,7 @@ const ProfileMenu = (props) => {
                     <Link href=''>
                         <a>
                             <Icon icon='icon-profile' size='24' color={Color.icon.main} />
-                            <label>پروفایل</label>
+                            <label>Profile</label>
                         </a>
                     </Link>
                 </S.list>
@@ -42,7 +42,7 @@ const ProfileMenu = (props) => {
                             <Link href=''>
                                 <a>
                                     <Icon icon='icon-dashboard' size='24' color={ Color.icon.main } />
-                                    <label>داشبورد</label>
+                                    <label>Dashboard</label>
                                 </a>
                             </Link>                            
                         </S.list>                    
@@ -52,7 +52,7 @@ const ProfileMenu = (props) => {
                 <S.list>
                     <button onClick={props.click}>
                         <Icon icon='icon-logout' size='24' color={ Color.icon.main } />
-                        <label>خروج</label>
+                        <label>Exit</label>
                     </button>
                 </S.list>
             </S.UnorderedList>

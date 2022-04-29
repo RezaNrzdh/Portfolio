@@ -36,7 +36,7 @@ export const Desc = styled.label`
     margin-top: 24px;
     margin-bottom: 32px;
     font-size: ${ Typography.body2.fontSize };
-    font-weight: ${ Typography.body2    .fontWeight };
+    font-weight: ${ Typography.body2.fontWeight };
     color: ${ Color.textColor.secondary };
 `;
 
@@ -56,7 +56,7 @@ export const BackWrapper = styled.div`
     font-weight: ${Typography.body2.fontWeight};
     label{
         color: ${Color.textColor.primary};
-        margin-left: 4px;
+        margin-right: 4px;
     }
     a{
         color: ${Color.primaryColor.main};

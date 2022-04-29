@@ -23,8 +23,8 @@ export const Anchor = styled.a`
     padding-right: 8px;
     margin-left: 32px;
     color: ${ Color.textColor.primary };
-    font-size: ${ Typography.body2.fontSize };
-    font-weight: ${ Typography.body2.fontWeight };
+    font-size: ${ Typography.body1.fontSize };
+    font-weight: ${ Typography.body1.fontWeight };
     &::after{
         content: "";
             display: flex;

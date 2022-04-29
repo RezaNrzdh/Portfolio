@@ -25,11 +25,11 @@ const Typography = {
     },
     body1: {
         fontSize: '1rem',
-        fontWeight: 500
+        fontWeight: 400
     },
     body2: {
         fontSize: '0.875rem',
-        fontWeight: 500
+        fontWeight: 400
     },
     BUTTON1: {
         fontSize: '1.125rem',

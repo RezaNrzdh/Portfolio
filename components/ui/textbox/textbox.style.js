@@ -10,12 +10,12 @@ export const Field = styled.input`
     display: flex;
     align-items: center;
     width: 100%;
-    padding-right: 16px;
-    padding-left: 40px;
+    padding-left: 16px;
+    padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: ${ Radius.small };
-    font-family: PelakFont;
+    font-family: UbuntuFont;
     outline: none;
     transition: border-color ease-in-out 0.3s;
     border: ${ props => props.outlined ? `2px solid ${ Color.strokeColor.main }` : null };
@@ -30,9 +30,9 @@ export const Field = styled.input`
 export const Anchor = styled.a`
     display: flex;
     position: absolute;
-    left: 8px;
+    right: 12px;
     top:auto;
     height: 100%;
     align-items: center;
-    margin-right: 8px
+    margin-left: 8px
 `;

@@ -11,13 +11,13 @@ const LoginPage = () => {
     const {userAuth, setUserAuth} = useContext(userContext);
 
     const [data] = useState({
-        submit: 'ورود به سایت',
-        desc: 'با ورود به سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی',
+        submit: 'CONTINUE',
+        desc: "By entering the site, you can like the designes and comment on them.",
         btn: 'secondary',
         back: {
-            label: 'هنوز عضو نشدی؟',
+            label: "Don't have an account?",
             link: {
-                key: 'همین الان عضو شو',
+                key: 'SIGN UP',
                 value: '/auth/register'
             }
         }

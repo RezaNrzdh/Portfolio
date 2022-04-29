@@ -34,14 +34,15 @@ export const list = styled.li`
     button{
         border: none;
         background-color: transparent;
-        font-family: PelakFont;
+        font-family: UbuntuFont;
         padding: 0;
     }
     a, button{
         display: flex;
+        align-items: center;
         width: 100%;
         label{
-            margin-right: 16px;
+            margin-left: 16px;
             color: ${ Color.textColor.primary };
             font-size: ${ Typography.body2.fontSize };
             font-weight: ${ Typography.body2.fontWeight };

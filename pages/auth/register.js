@@ -11,13 +11,13 @@ const RegisterPage = () => {
     const {userAuth, setUserAuth} = useContext(userContext);
 
     const [data] = useState({
-        submit: 'عضویت در سایت',
-        desc: 'با عضویت در سایت می‌تونی طراحی ها رو لایک کنی و نظرت رو در موردشون بنویسی',
+        submit: 'SING UP NOW',
+        desc: 'By Register to the site, you can like the designes and comment on them.',
         btn: 'primary',
         back: {
-            label: 'قبلا عضو شدی؟',
+            label: 'Already have an account?',
             link: {
-                key: 'همین الان لاگین شو',
+                key: 'SIGN IN',
                 value: '/auth/login'
             }
         }
