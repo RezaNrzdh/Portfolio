@@ -27,12 +27,7 @@ export const HeroTitle = styled.div`
         align-items: center;
         h1{
             font-size: 48px;
-            margin-left: 16px;
             color: ${ Color.secondaryColor.main };
-        }
-        span{
-            font-size: ${ Typography.headline1.fontSize };
-            color: ${ Color.textColor.primary };
         }
     }
 `;
@@ -41,7 +36,7 @@ export const HeroTitleButtons = styled.div`
     display: flex;
     button{
         &:first-child{
-            margin-left: 16px;
+            margin-right: 16px;
         }
     }
 `;
@@ -59,7 +54,7 @@ export const Skills = styled.div`
     margin-left: auto;
     margin-right: auto;
     transform: translateY(-56px);
-    width: 780px;
+    width: 860px;
     height: 112px;
     background-color: ${ Color.surfaceColor.light };
     border-width: 1px;
@@ -72,28 +67,17 @@ export const Skills = styled.div`
 
 export const SkillsContainer = styled.div`
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
+    grid-column-gap: 24px;
     margin: auto;
-    width: 700px;
+    width: 780px;
     height: inherit;
 `;
 
 export const Column = styled.div`
     display: flex;
     align-items: center;
-     &::before{
-         display: flex;
-         content: '';
-         margin-left: 24px;
-         width: 1px;
-         height: 64px;
-         background-image: linear-gradient(#ffffff, #E3E4E6, #ffffff);
-     }
-     &:first-child{
-        &::before{
-            display: none;
-        }
-     }
 `;
 
 export const SkillIcon = styled.div`
@@ -108,7 +92,7 @@ export const SkillIcon = styled.div`
 
 export const Info = styled.div`
     display: flex;
-    margin-right: 16px;
+    margin-left: 16px;
     flex-direction: column;
     color: ${ Color.textColor.primary };
 `;
@@ -119,5 +103,6 @@ export const Label = styled.label`
 `;
 
 export const Span = styled.span`
+    margin-top: 8px;
     font-size: ${ Typography.caption.fontSize };
 `;

@@ -12,7 +12,7 @@ const Footer = () => {
                     <img src='/icons/Logo.svg' />
                 </S.LogoWrapper>
                 <S.Description>
-                    I'm Reza Norouzzadeh, I'm a UX Designer and Front-end Developer. I'm very interested in computer science. And I work
+                    I'm Reza Norouz zadeh, I'm a UX Designer and Front-end Developer. I'm very interested in computer science. And I work
                     in the field of web design, app design, game development and 2D and 3D graphics.
                     {/* رضا نوروززاده هستم، طراح محصول و توسعه دهنده فرانت.
                     به دنیای کامپیوتر علاقه بسیار زیادی دارم، در زمینه طراحی وبسایت، بازیسازی،

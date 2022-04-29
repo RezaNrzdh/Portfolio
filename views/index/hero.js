@@ -9,18 +9,18 @@ const Hero = () => {
     const [data] = useState([
         {
             icon: <img src='/images/uiux.svg' />,
-            title: 'طراح محصول',
-            desc: '6 سال سابقه کار حرفه ای'
+            title: 'UX DESIGNER',
+            desc: "6 years of professional experience"
         },
         {
             icon: <img src='/images/frontend.svg' />,
-            title: 'توسعه دهنده فرانت',
-            desc: 'HTML, CSS, ReactJs'
+            title: 'WEB DEVELOPER',
+            desc: 'Ability to work with ReactJs, NodeJs and Mongodb'
         },
         {
             icon: <img src='/images/graphic.svg' />,
-            title: 'گرافیست',
-            desc: 'دو بعدی و سه بعدی'
+            title: '2D/3D GRAPHICS',
+            desc: 'Ability to work with Adobe Photoshop and Illustrator'
         }
     ]);
 
@@ -28,15 +28,14 @@ const Hero = () => {
         <S.HeroWapper>
             <Container>
                 <S.HeroTitle>
-                    <div className='hi'>سلام</div>
+                    <div className='hi'>Hi, I Am!</div>
                     <div className='myname'>
-                        <h1>John Doe</h1>
-                        <span>هستم</span>
+                        <h1>Reza Norouz zadeh</h1>
                     </div>
                     <p>طراح محصول و توسعه دهنده فرانت. به دنیای کامپیوتر علاقه بسیار زیادی دارم، در زمینه طراحی وبسایت، بازیسازی، گرافیک دو و سه بعدی فعالیت میکنم.</p>
                     <S.HeroTitleButtons>
-                        <Button basic='primary' type='filled' className='one'>درباره من</Button>
-                        <Button basic='dark' type='outlined'>رزومه</Button>
+                        <Button basic='primary' type='filled' className='one'>About me</Button>
+                        <Button basic='dark' type='outlined'>Resume</Button>
                     </S.HeroTitleButtons>
                 </S.HeroTitle>
             </Container>

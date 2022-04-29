@@ -46,8 +46,8 @@ export const Title = styled.h2`
     min-height: 64px;
     height: 64px;
     padding-bottom: 8px;
-    font-size: ${ Typography.body1.fontSize };
-    font-weight: ${ Typography.body1.fontWeight };
+    font-size: ${ Typography.headline4.fontSize };
+    font-weight: ${ Typography.headline4.fontWeight };
     text-align: center;
 `;
 
