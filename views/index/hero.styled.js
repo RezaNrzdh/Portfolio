@@ -30,6 +30,9 @@ export const HeroTitle = styled.div`
             color: ${ Color.secondaryColor.main };
         }
     }
+    p{
+        line-height: 24px;
+    }
 `;
 
 export const HeroTitleButtons = styled.div`

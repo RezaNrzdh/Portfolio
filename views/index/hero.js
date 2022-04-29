@@ -28,11 +28,12 @@ const Hero = () => {
         <S.HeroWapper>
             <Container>
                 <S.HeroTitle>
-                    <div className='hi'>Hi, I Am!</div>
+                    <div className='hi'>Hi! I Am</div>
                     <div className='myname'>
                         <h1>Reza Norouz zadeh</h1>
                     </div>
-                    <p>طراح محصول و توسعه دهنده فرانت. به دنیای کامپیوتر علاقه بسیار زیادی دارم، در زمینه طراحی وبسایت، بازیسازی، گرافیک دو و سه بعدی فعالیت میکنم.</p>
+                    <p>I'm a UX Designer and Front-end Developer. I'm very interested in computer science. And I work
+                    in the field of web design, app design, game development and 2D and 3D graphics.</p>
                     <S.HeroTitleButtons>
                         <Button basic='primary' type='filled' className='one'>About me</Button>
                         <Button basic='dark' type='outlined'>Resume</Button>
