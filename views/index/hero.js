@@ -35,8 +35,8 @@ const Hero = () => {
                     <p>I'm a UX Designer and Front-end Developer. I'm very interested in computer science. And I work
                     in the field of web design, app design, game development and 2D and 3D graphics.</p>
                     <S.HeroTitleButtons>
-                        <Button basic='primary' type='filled' className='one'>About me</Button>
-                        <Button basic='dark' type='outlined'>Resume</Button>
+                        <Button basic='primary' type='filled' className='one'>HIRE ME</Button>
+                        <Button basic='dark' type='outlined'>RESUME</Button>
                     </S.HeroTitleButtons>
                 </S.HeroTitle>
             </Container>

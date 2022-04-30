@@ -60,9 +60,6 @@ export const Skills = styled.div`
     width: 860px;
     height: 112px;
     background-color: ${ Color.surfaceColor.light };
-    border-width: 1px;
-    border-style: solid;
-    border-color: ${ Color.strokeColor.main };
     box-shadow: ${ Shadow.xLarge };
     border-radius: 78px;
     z-index: 990;

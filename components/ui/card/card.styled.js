@@ -84,7 +84,7 @@ export const Create = styled.div`
 
 export const Span = styled.span`
     display: flex;
-    margin-right: 8px;
+    margin-left: 8px;
     font-size: ${ Typography.body2.fontSize };
     font-weight: ${ Typography.body2.fontWeight };
 `;
