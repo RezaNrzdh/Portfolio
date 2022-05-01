@@ -13,7 +13,6 @@ const ShotsPage = ({ data }) => {
     });
 
     const DownloadHandler = () => {
-        //console.log(imageState);
         window.open(imageState.images[imageState.seleted].src);
     }
 
@@ -59,6 +58,7 @@ const ShotsPage = ({ data }) => {
                     downloadImage={DownloadHandler} />
                 <Desc desc={data.description} />
             </Container>
+            <Related />
         </Layout>
     );
 }

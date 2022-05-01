@@ -7,21 +7,21 @@ const Sidebar = () => {
     return(
         <S.SidebarWrapper>
             <S.SidebarSticky>
-                <Tooltip title='به اشتراک بذار'>
+                <Tooltip title='Share'>
                     <Link href=''>
                         <S.Anchor>
                             <Icon icon='icon-share' />
                         </S.Anchor>
                     </Link>
                 </Tooltip>
-                <Tooltip title='لایک کن'>
+                <Tooltip title='Like'>
                     <Link href=''>
                         <S.Anchor>
                             <Icon icon='icon-like' />
                         </S.Anchor>
                     </Link>
                 </Tooltip>
-                <Tooltip title='نظرتو بگو'>
+                <Tooltip title='Feedback'>
                     <Link href=''>
                         <S.Anchor>
                             <Icon icon='icon-comment' />

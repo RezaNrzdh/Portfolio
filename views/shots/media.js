@@ -12,10 +12,10 @@ const Media = (props) => {
                 <S.Hero src={ props.images[props.selected].src } />
                 <S.NavigationWrapper>
                     <Button click={() => {props.prevBtn()}} basic='dark' type='outlined' iconOnly>
-                        <Icon icon='icon-chevronright' />
+                        <Icon icon='icon-chevronleft' />
                     </Button>
                     <Button click={() => {props.nextBtn()}} basic='dark' type='outlined' iconOnly>
-                        <Icon icon='icon-chevronleft' />
+                        <Icon icon='icon-chevronright' />
                     </Button>
                 </S.NavigationWrapper>
             </S.HeroWrapper>
