@@ -18,6 +18,9 @@ export const Details = styled.div`
     display: flex;
     margin-top: 24px;
     margin-bottom: 24px;
+    svg{
+        width: 24px;
+    }
 `;
 
 export const Author = styled.div`
@@ -28,7 +31,7 @@ export const Author = styled.div`
     color: ${ Color.textColor.primary };
     font-size: ${ Typography.body2.fontSize };
     font-weight: ${ Typography.body2.fontWeight };
-    margin-left: 32px;
+    margin-right: 32px;
 `;
 
 export const create = styled.div`
