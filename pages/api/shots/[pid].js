@@ -1,5 +1,5 @@
-import dbConnect from '../../../lib/dbConnect';
-import shotsModel from '../../../models/shotsModel';
+import dbConnect from 'lib/dbConnect';
+import shotsModel from 'models/shotsModel';
 
 const Handler = async (req, res) => {
     
