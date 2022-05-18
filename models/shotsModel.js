@@ -10,7 +10,9 @@ const shotsSchema = new mongoose.Schema({
         required: true,
     },
     createAt: {
-        type: Number
+        type: Number,
+        required: true,
+        default: new Date(Date.now())
     },
     images: {
         type: Array
@@ -29,7 +31,9 @@ const shotsSchema = new mongoose.Schema({
         type: Array
     },
     slug: {
-        type: String
+        type: String,
+        required: true,
+        lowercase: true
     }
 });
 

@@ -3,14 +3,51 @@ import shotsModel from "models/shotsModel";
 
 const Handler = async (req, res) => {
     
-    await dbConnect();
-    const shotsList = await shotsModel.find();
+    const {method, body} = req;
 
-    const data = {
-        success: true,
-        cards: shotsList,
+    //Set Header
+    res.setHeader('Access-Control-Allow-Origin', process.env.DOMAIN);
+
+    await dbConnect();
+
+    switch(method) {
+        case 'GET':
+            try{
+                const getAllShots = await shotsModel.find();
+                res.status(200).json({
+                    success: true,
+                    cards: getAllShots,
+                });
+            }
+            catch(error){
+                res.status(400).json({ 
+                    success: false,
+                    error: error
+                });
+            }
+            break;
+        case 'POST':
+            try{
+                const createNewShot = await shotsModel.create(body);
+                if(createNewShot != null){
+                    res.status(200).json({
+                        success: true,
+                        data: createNewShot,
+                        desc: 'پست جدید با موفقیت ثبت شد'
+                    });
+                }
+                else{
+                    res.status(200).json({
+                        success: false,
+                        error: 'خطایی رخ داده است، دوباره تلاش کنید'
+                    });
+                }
+            }
+            catch(err){
+                
+            }
+            break;
     }
-    res.status(200).json(data);
 }
 
 export default Handler;
