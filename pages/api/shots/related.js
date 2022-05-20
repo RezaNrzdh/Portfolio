@@ -8,7 +8,11 @@ const Handler = async (req, res) => {
     await dbConnect();
 
     try{
-        const getRelatedShots = await shotsModel.find({ tags: 'reza' });
+        const getRelatedShots = await shotsModel
+            .find({ tags: 'reza' })
+            .sort({ _id: -1 })
+            .limit(4);
+            
         res.status(200).json({
             success: true,
             data: getRelatedShots
