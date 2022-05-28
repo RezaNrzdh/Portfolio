@@ -13,7 +13,7 @@ const Handler = async (req, res) => {
     switch(method) {
         case 'GET':
             try{
-                const getAllShots = await shotsModel.find();
+                const getAllShots = await shotsModel.find().sort({ _id: -1 });
                 res.status(200).json({
                     success: true,
                     cards: getAllShots,

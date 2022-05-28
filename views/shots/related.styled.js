@@ -17,3 +17,10 @@ export const Title = styled.h2`
     font-size: ${ Typography.headline3.fontSize };
     font-weight: ${ Typography.headline3.fontWeight };
 `;
+
+export const CardList = styled.div`
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 24px;
+    background-color: red;
+`;

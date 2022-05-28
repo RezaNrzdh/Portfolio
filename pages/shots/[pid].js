@@ -65,9 +65,11 @@ const ShotsPage = ({ data }) => {
 
 export const getServerSideProps =  async (context) => {
     const data = await axios.get(`${process.env.DOMAIN}/api/shots/${context.params.pid}`);
+    const related = await axios.get();
     return{
         props: {
-            data: data.data
+            data: data.data,
+            related: related
         }
     }
 }
