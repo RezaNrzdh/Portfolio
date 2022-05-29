@@ -12,6 +12,12 @@ const ShotsPage = ({ data }) => {
         seleted: 0
     });
 
+    useEffect(async () => {
+        const related = await axios.post('/api/shots/related',{ tags: data.tags });
+        console.log(related);
+    },[]);
+
+    // Handlers
     const DownloadHandler = () => {
         window.open(imageState.images[imageState.seleted].src);
     }
@@ -64,12 +70,11 @@ const ShotsPage = ({ data }) => {
 }
 
 export const getServerSideProps =  async (context) => {
-    const data = await axios.get(`${process.env.DOMAIN}/api/shots/${context.params.pid}`);
-    const related = await axios.get();
+    const {data} = await axios.get(`${process.env.DOMAIN}/api/shots/${context.params.pid}`);
+
     return{
         props: {
-            data: data.data,
-            related: related
+            data: data
         }
     }
 }

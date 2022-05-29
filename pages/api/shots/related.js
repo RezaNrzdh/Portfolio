@@ -7,23 +7,28 @@ const Handler = async (req, res) => {
 
     await dbConnect();
 
-    try{
-        const getRelatedShots = await shotsModel
-            .find({ tags: 'reza' })
-            .sort({ _id: -1 })
-            .limit(4);
-            
-        res.status(200).json({
-            success: true,
-            data: getRelatedShots
-        });
+    switch(method){
+        case 'POST':
+            try{
+                const getRelatedShots = await shotsModel
+                    .find({ tags: body.tags })
+                    .sort({ _id: -1 })
+                    .limit(4);
+                    
+                res.status(200).json({
+                    success: true,
+                    data: getRelatedShots
+                });
+            }
+            catch(error){
+                res.status(200).json({
+                    success: false,
+                    error:  error
+                });
+            }
+            break;
     }
-    catch(error){
-        res.status(200).json({
-            success: false,
-            error:  error
-        });
-    }
+
 }
 
 export default Handler;
